@@ -4,20 +4,24 @@ import './modalButton.css';
 
 function ModalButton({ 
 
-            // Name to display on button
-            buttonName,
+            // Name to display on button, with default of Click
+            buttonName = 'Click',
 
             // Background color of the button, with default of light blue
-            color='#3081c8',
+            color = '#3081c8',
             
             // Text color of the button, with default of white
-            textColor='#fff',
+            textColor = '#fff',
 
-            // Component to be displayed in the modal
-            Component,
+            // Component to be displayed in the modal, default displays info on where to pass in the component
+            Component = () => 
+                (<div style={{backgroundColor:'white',padding:'2rem',textAlign:'center'}}>
+                    <p>Pass the Component you want to render into the ModalButton Element.</p> 
+                    <p>{'<ModalButton Component = {YourComponent} />'}</p>
+                </div>),
 
             // Any additional props to be used in the component in the modal
-            props 
+            props  
         }) {
 
     // Handles opening and closing of modal
