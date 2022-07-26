@@ -12,7 +12,7 @@ function Modal({
             Component,
 
             // Props to be passed down to the component
-            props
+            ...props
         }) {
     
     // Closes the modal if clicked outside of the component
@@ -32,7 +32,7 @@ function Modal({
 
                 {/* Contains component to display in modal */}
                 <div className="modalCard"> 
-                    <Component props={props}/>
+                    <Component {...props}/>
                 </div>
             </div>
         </>

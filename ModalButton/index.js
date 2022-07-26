@@ -21,7 +21,7 @@ function ModalButton({
                 </div>),
 
             // Any additional props to be used in the component in the modal
-            props  
+            ...props  
         }) {
 
     // Handles opening and closing of modal
@@ -35,7 +35,7 @@ function ModalButton({
             </div>
 
 
-            <Modal showModal={showModal} setShowModal={setShowModal} Component={Component} props={props} />
+            <Modal showModal={showModal} setShowModal={setShowModal} Component={Component} {...props} />
         </>
     );
 }
