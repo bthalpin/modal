@@ -16,7 +16,23 @@ ModalButton takes in a few props:
 
 4. Component - Pass in the component you want to render inside the modal - Default is small card describing how to pass in the component
 
-5. props - Pass in any remaining props for the rendered component
+5. props - Any remaining props will automatically be passed to the component you want to rended in the modal.  
+
+```
+<ModalButton buttonName={'Press'} color={'grey'} textColor={'blue'} Component={MyComponentName} someOtherProp={'extra'} oneMore={'bonus'} />
+```
+
+Any property not entered will use the default.  The extra props can be accessed in your component by using the property name you used.
+
+```
+props.someOtherProp  props.oneMore
+```
+
+or using Object Destructuring
+
+```
+const { someOtherProp, oneMore } = props;
+```
 
 ## Questions
 If you have any questions about the repo, open an issue or contact me directly at <brian.t.halpin@gmail.com>. You can find more of my work at [Brian Halpin](https://github.com/bthalpin).
