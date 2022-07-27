@@ -3,20 +3,24 @@
 ## Description
 Modal is a reusable Modal component for use in React projects.  It comes with a Modal and a ModalButton.  The ModalButton is used to open the modal.  Simply move both folders into your react project and you will have a modal ready to go.
 
+I've added a TypeScript version of the modal in the ModalTS and ModalButtonTS folders.
+
 ## Usage
 To use, copy the Modal and ModalButton folders into your React project src folder (I typically place it in /src/components).  Import the ModalButton into any part of your project that you want to have a modal.  You can have multiple Modals in your project, simply create the ModalButton element wherever you want and pass in the props to customize your project.
 
 ModalButton takes in a few props:
 
-1. buttonName - Pass in the text for the button - Default Click
+1. modalPosition - Pass in 'absolute' to be able to scroll, 'fixed' for fixed position on screen - Default 'fixed' - FOR TYPESCRIPT VERSION instead of 'fixed' pass in {position:'fixed'}
 
-2. color - Pass in backgroundColor for the button - Default Light Blue (#3081c8)
+2. buttonName - Pass in the text for the button - Default Click
 
-3. textColor - Pass in the text color of the button - Default White (#fff)
+3. color - Pass in backgroundColor for the button - Default Light Blue (#3081c8)
 
-4. Component - Pass in the component you want to render inside the modal - Default is small card describing how to pass in the component
+4. textColor - Pass in the text color of the button - Default White (#fff)
 
-5. props - Any remaining props will automatically be passed to the component you want to rended in the modal.  
+5. Component - Pass in the component you want to render inside the modal - Default is small card describing how to pass in the component
+
+6. props - Any remaining props will automatically be passed to the component you want to rended in the modal.  
 
 ```
 <ModalButton buttonName={'Press'} color={'grey'} textColor={'blue'} Component={MyComponentName} someOtherProp={'extra'} oneMore={'bonus'} />
