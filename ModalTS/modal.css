@@ -1,0 +1,29 @@
+.modal {
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    display:none;
+}
+.showModal{
+    display:block;
+}
+.showModal::before{
+    content:'';
+    background-color: black;
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    opacity: 0.5;
+}
+.modalCard{
+    border-radius:0.3rem;
+    top:10%;
+    left:50%;
+    transform: translate(-50%,0);
+    width:fit-content;
+    height:fit-content;
+}
